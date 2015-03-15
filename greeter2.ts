@@ -4,7 +4,7 @@ module Greeter2 {
         fullName: string;
 
         constructor(public firstName, public lastName) {
-            this.fullName = firstName + " " + lastName;
+            this.fullName = `${firstName} lastName`;
         }
     }
 
@@ -14,7 +14,7 @@ module Greeter2 {
     }
 
     function greeter(person: Person) {
-        return "Hello " + person.firstName + " " + person.lastName;
+        return `Hello there, ${person.firstName} ${person.lastName}`;
     }
 
     document.body.innerHTML = greeter({firstName: "Robert", lastName: "Rees"});

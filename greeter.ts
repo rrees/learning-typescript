@@ -1,6 +1,6 @@
 
 function greeter(name: string) {
-    return "Hello " + name;
+    return `Hello ${name}`;
 }
 
 var user = "Robert";
