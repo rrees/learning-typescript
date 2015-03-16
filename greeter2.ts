@@ -4,7 +4,7 @@ module Greeter2 {
         fullName: string;
 
         constructor(public firstName, public lastName) {
-            this.fullName = `${firstName} lastName`;
+            this.fullName = `${firstName} ${lastName}`;
         }
     }
 
@@ -17,6 +17,12 @@ module Greeter2 {
         return `Hello there, ${person.firstName} ${person.lastName}`;
     }
 
+    var person = Object.freeze(new TaxMan("Jon", "Davies"));
+
+    person.firstName = 'Joe';
+
+    console.log(person);
+
     document.body.innerHTML = greeter({firstName: "Robert", lastName: "Rees"});
-    document.body.innerHTML = greeter(new TaxMan("Jon", "Davies"));
+    document.body.innerHTML = greeter(person);
 }
